@@ -83,8 +83,7 @@ class HTTPCheck(base.BaseCheck):
             except:
                 pass
 
-        return False
-
+        raise httplib.HTTPException('Could not connect to any of the local ips')
 
     def _validate_config(self):
 
