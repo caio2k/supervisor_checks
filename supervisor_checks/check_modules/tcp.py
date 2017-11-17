@@ -60,7 +60,7 @@ class TCPCheck(base.BaseCheck):
             finally:
                 sock.close()
 
-        return False
+        raise socket.error('Could not connect to any of the loca addresses')
 
     def _validate_config(self):
 
